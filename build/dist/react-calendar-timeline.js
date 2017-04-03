@@ -2624,13 +2624,13 @@ return /******/ (function(modules) { // webpackBootstrap
 						lineHeight: groupHeights[index] - 1 + 'px'
 					};
 	
-					var className = group.className ? " " + group.className : "";
+					var cn = group.className ? " " + group.className : "";
 	
 					groupLines.push(_react2.default.createElement(
 						'div',
 						{
 							key: (0, _utils._get)(group, groupIdKey),
-							className: 'rct-sidebar-row' + (i % 2 === 0 ? ' rct-sidebar-row-even' : ' rct-sidebar-row-odd') + className,
+							className: 'rct-sidebar-row' + (i % 2 === 0 ? ' rct-sidebar-row-even' : ' rct-sidebar-row-odd') + cn,
 							style: elementStyle },
 						(0, _utils._get)(group, groupTitleKey)
 					));

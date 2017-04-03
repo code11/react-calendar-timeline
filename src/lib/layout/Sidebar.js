@@ -109,7 +109,7 @@ export default class Sidebar extends Component {
 				lineHeight: `${ groupHeights[index] - 1 }px`
 			}
 
-			let className = group.className
+			let cn = group.className
 				? ( " " + group.className )
 				: ""
 
@@ -118,7 +118,7 @@ export default class Sidebar extends Component {
 					key={_get( group, groupIdKey )}
 					className={'rct-sidebar-row' + ( i % 2 === 0
 					? ' rct-sidebar-row-even'
-					: ' rct-sidebar-row-odd' ) + className}
+					: ' rct-sidebar-row-odd' ) + cn}
 					style={elementStyle}>
 					{_get( group, groupTitleKey )}
 				</div>
