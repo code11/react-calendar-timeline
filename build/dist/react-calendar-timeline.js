@@ -2576,7 +2576,8 @@ return /******/ (function(modules) { // webpackBootstrap
 				    headerHeight = _props.headerHeight;
 				var _props$keys = this.props.keys,
 				    groupIdKey = _props$keys.groupIdKey,
-				    groupTitleKey = _props$keys.groupTitleKey;
+				    groupTitleKey = _props$keys.groupTitleKey,
+				    className = _props$keys.className;
 				var scrollTop = this.state.scrollTop;
 	
 	

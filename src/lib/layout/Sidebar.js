@@ -63,7 +63,7 @@ export default class Sidebar extends Component {
 			headerHeight
 		} = this.props
 
-		const { groupIdKey, groupTitleKey } = this.props.keys
+		const { groupIdKey, groupTitleKey , className } = this.props.keys
 
 		const { scrollTop } = this.state
 
@@ -109,9 +109,9 @@ export default class Sidebar extends Component {
 				lineHeight: `${ groupHeights[index] - 1 }px`
 			}
 
-			let cn = group.className
-				? ( " " + group.className )
-				: ""
+			let cn = group.className ?
+					" " +group.className
+					: ""
 
 			groupLines.push(
 				<div
