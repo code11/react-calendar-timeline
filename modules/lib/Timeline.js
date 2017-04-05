@@ -860,15 +860,16 @@ var _initialiseProps = function _initialiseProps() {
       e.preventDefault();
       var parentPosition = (0, _utils.getParentPosition)(e.currentTarget);
       var xPosition = e.clientX - parentPosition.x;
-      _this3.changeZoom(1.0 + e.deltaY / 50, xPosition / _this3.state.width);
+      _this3.changeZoom(1.0 + e.deltaY / 500, xPosition / _this3.state.width);
     } else if (e.shiftKey) {
       e.preventDefault();
       var scrollComponent = _this3.refs.scrollComponent;
       scrollComponent.scrollLeft += e.deltaY;
     } else if (e.altKey) {
+      e.preventDefault();
       var _parentPosition = (0, _utils.getParentPosition)(e.currentTarget);
       var _xPosition = e.clientX - _parentPosition.x;
-      _this3.changeZoom(1.0 + e.deltaY / 500, _xPosition / _this3.state.width);
+      _this3.changeZoom(1.0 + e.deltaY / 50, _xPosition / _this3.state.width);
     } else {
       if (_this3.props.fixedHeader === 'fixed') {
         e.preventDefault();

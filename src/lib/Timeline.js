@@ -438,17 +438,19 @@ export default class ReactCalendarTimeline extends Component {
     const { traditionalZoom } = this.props
     if (e.ctrlKey) {
       e.preventDefault()
-      const parentPosition = getParentPosition(e.currentTarget)
+	  const parentPosition = getParentPosition(e.currentTarget)
       const xPosition = e.clientX - parentPosition.x
-      this.changeZoom(1.0 + e.deltaY / 50, xPosition / this.state.width)
+      this.changeZoom(1.0 + e.deltaY / 500, xPosition / this.state.width)
+
     } else if (e.shiftKey) {
       e.preventDefault()
       const scrollComponent = this.refs.scrollComponent
       scrollComponent.scrollLeft += e.deltaY
     } else if (e.altKey) {
-      const parentPosition = getParentPosition(e.currentTarget)
+	  e.preventDefault()
+	  const parentPosition = getParentPosition(e.currentTarget)
       const xPosition = e.clientX - parentPosition.x
-      this.changeZoom(1.0 + e.deltaY / 500, xPosition / this.state.width)
+      this.changeZoom(1.0 + e.deltaY / 50, xPosition / this.state.width)
     } else {
       if (this.props.fixedHeader === 'fixed') {
         e.preventDefault()
